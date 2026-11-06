@@ -1,134 +1,131 @@
 # CareerKit 🔥
 
-**Your Career. Your Next Move.** · By **Roxs | 295DevOps**
+**Your Career. Your Next Move.**  
+**By Roxs · [295DevOps](https://blog.295devops.com) · [roxs.dev](https://roxs.dev)**  
+*Build with Fire. Deploy with Power.*
 
-En tecnología optimizamos pipelines, recursos, infraestructura y código... pero ¿cuándo nos sentamos a revisar cómo contamos lo que sabemos hacer?
+## 👋 ¡Hola, comunidad!
 
-Soy Roxs y armé **CareerKit** para que más colegas puedan mostrar su experiencia sin inventarse una carrera. Si estás buscando tu primera oportunidad, cambiando de rol o atravesando una transición laboral, este recurso es para vos. 💜
+Soy Roxs. Nos pasamos horas optimizando pipelines, infraestructura y código, pero ¿cuándo nos sentamos a optimizar cómo contamos lo que sabemos hacer?
 
-No hay fórmulas mágicas para conseguir trabajo ni un "SEO 100x" garantizado. Hay buenas preguntas, evidencia real y pasos concretos.
+CareerKit nació para compartir una mano con quienes están buscando su primera oportunidad, cambiando de rol o atravesando una etapa laboral difícil. No hace magia, no inventa logros y no promete conseguirte trabajo. Te ayuda a poner en palabras la experiencia que ya construiste. 💜
 
-## Qué hace
+Es un **Agent Skill abierto**, usable en **Claude Code** y **OpenAI Codex**, que trabaja en español o inglés según el pedido.
 
-- 🔍 **LinkedIn:** intenta leer el perfil público, identifica cuánto pudo ver y **no inventa secciones ocultas**. Si necesita el PDF o el texto, te dice exactamente qué falta.
-- 📸 **Fotografía:** prepara prompts para retratos profesionales preservando tu identidad (no genera imágenes por sí solo).
-- 🚀 **Transición laboral:** te ayuda a ordenar experiencia, oportunidades, mensajes y próximos pasos sin presionarte.
+## ✨ Qué hace
 
-## ⚡ Instalación recomendada: Claude Code Marketplace
+| Modo | Para qué sirve |
+| --- | --- |
+| 🔍 LinkedIn | Auditoría con evidencias, textos, fortalezas y mejoras concretas. |
+| 🌐 Profile Discovery | Busca fuentes públicas si LinkedIn no abre; no confunde esas fuentes con campos del perfil. |
+| 🖥️ Browser-assisted import | Usa un navegador autenticado **solo si está disponible y autorizado**. |
+| 📸 Professional Photo | Prompts para retratos profesionales respetando tus rasgos. |
+| 🧭 Career Transition | Planes realistas, networking y preparación laboral. |
 
-Una vez publicado este repositorio como **`roxsross/careerkit`**, abrí una sesión de **Claude Code** y ejecutá estos comandos, uno por vez:
+## ⚡ Instalación con Claude Code (Marketplace)
+
+Cuando el repo esté publicado como `roxsross/careerkit`, dentro de Claude Code:
 
 ```text
 /plugin marketplace add roxsross/careerkit
 /plugin install careerkit@careerkit-marketplace
 ```
 
-Luego probá:
+Podés invocarlo así:
 
 ```text
-/careerkit:careerkit Auditá mi LinkedIn: https://www.linkedin.com/in/tu-usuario/
+/careerkit:careerkit Auditá mi perfil de LinkedIn: https://www.linkedin.com/in/usuario/
 ```
 
-En el terminal también podés usar `claude plugin marketplace add roxsross/careerkit` y `claude plugin install careerkit@careerkit-marketplace`.
+### ¿Querés leer tu perfil con tu propia sesión de Chrome?
 
-> Esto instala un marketplace **comunitario**, no implica publicación en el catálogo oficial de Anthropic. Si tu Claude Code usa otra interfaz, buscá `Plugin > Marketplaces` y añadí el repositorio.
+Claude Code puede conectarse con **Claude in Chrome** bajo ciertos requisitos. No viene incluido en CareerKit y requiere instalación, conexión y permisos por separado. Consultá la [documentación de Claude in Chrome](https://code.claude.com/docs/en/chrome).
 
-## 🤖 Instalación en OpenAI Codex
-
-Desde Codex, pedile al instalador de skills:
+En Claude Code verificá la conexión con `/chrome`. También podés iniciar una sesión compatible mediante `claude --chrome`. Luego pedí:
 
 ```text
-$skill-installer install https://github.com/roxsross/careerkit/tree/main/skills/careerkit
+/careerkit:careerkit Auditá mi propio LinkedIn usando mi navegador conectado. Tenés mi permiso para leer el perfil, pero no para editarlo ni enviar mensajes.
 ```
 
-O agregá la carpeta `skills/careerkit` a `~/.agents/skills/careerkit` para uso personal, o `.agents/skills/careerkit` en el repositorio donde trabajes. Reiniciá Codex si no lo descubre.
+Si Chrome no está conectado, la auditoría puede continuar con acceso público, búsqueda web, PDF o texto. **No se requieren contraseñas, cookies ni tokens.**
 
-## 🧪 Ejemplos de uso que podés copiar
+## 🤖 Instalación en Codex
+
+Copiá **toda** la carpeta `skills/careerkit/` en `~/.agents/skills/careerkit/` (personal) o `.agents/skills/careerkit/` (proyecto). También podés utilizar un instalador de skills que acepte rutas de GitHub, según tu configuración.
 
 ```text
-/careerkit:careerkit Revisá mi LinkedIn https://www.linkedin.com/in/mi-perfil/. Primero comprobá qué secciones podés leer. Si solo ves una parte, no hagas una auditoría completa.
+$careerkit Auditá mi perfil de LinkedIn. Si no podés leerlo, buscá fuentes oficiales y explicá lo que falta.
+```
+
+La navegación autenticada en Codex depende de herramientas de navegador/computer-use configuradas por el usuario; **CareerKit no instala ninguna**.
+
+## 🧪 Probá en menos de un minuto
+
+```text
+careerkit check: decime qué capacidades tenés para abrir webs, buscar, leer PDF y usar navegador.
 ```
 
 ```text
-/careerkit:careerkit Te adjunto mi LinkedIn en PDF. Quiero tres titulares, un About natural y mejoras concretas en mis experiencias. No inventes métricas.
+careerkit auditá mi perfil https://www.linkedin.com/in/usuario/ y no confundas las fuentes externas con lo que realmente dice mi LinkedIn.
 ```
 
 ```text
-/careerkit:careerkit Quiero una foto de LinkedIn con estilo Tech Leader. Tengo una selfie; conservá mi cara y proponé dos prompts, uno editorial y uno minimalista.
+careerkit usá el PDF de mi perfil. Prepará tres headlines y un About natural sin inventar métricas.
 ```
 
 ```text
-/careerkit:careerkit Me desvincularon hace poco. Necesito un plan realista de cinco días para buscar trabajo en DevOps y un mensaje para mi comunidad.
+careerkit necesito tres prompts para una foto Tech Leader, manteniendo mi rostro.
 ```
 
-En Codex podés invocar `$careerkit` con el mismo texto o describir la tarea en lenguaje natural.
+Más ejemplos en [examples/requests.md](skills/careerkit/examples/requests.md) y [ejemplo con navegador](skills/careerkit/examples/browser-claude.md).
 
-> **Importante:** CareerKit no da acceso especial a LinkedIn. La lectura de URLs depende de las herramientas disponibles en el agente. Si no puede acceder a tu perfil completo, puede trabajar con una exportación PDF o con el texto que compartas.
+## 🔎 ¿Por qué a veces falla LinkedIn?
 
-### Instalación manual (alternativa)
+Un `Failed to fetch` significa que **esa herramienta** no logró leer la URL, no que la persona no tenga experiencia. CareerKit prioriza un navegador autorizado cuando esté conectado, luego lectura pública, fuentes profesionales verificables y documentos que compartas.
 
-Si preferís evitar el marketplace de Claude, copiá el directorio `skills/careerkit/` completo a `.claude/skills/careerkit/` (Claude Code) o `.agents/skills/careerkit/` (Codex). Para usarlo en cualquier proyecto, colocá la carpeta bajo `~/.claude/skills/` o `~/.agents/skills/` respectivamente. No copies un `SKILL.md` aislado: los workflows y referencias también importan.
+**No puede asegurar acceso a LinkedIn** ni evita controles de acceso. Una fuente externa puede respaldar tu trayectoria, pero no demuestra el texto real de tu About o tus skills actuales.
 
-## 🔎 ¿Por qué a veces te pide el PDF?
+| Resultado | Significado |
+| --- | --- |
+| `FULL_AUDIT` | Se leyeron titular, About y experiencia reales. |
+| `PARTIAL_AUDIT` | Solo se pudieron comprobar algunas secciones. |
+| `PUBLIC_PRESENCE_REPORT` | Se comprobó información pública externa, no el perfil completo. |
+| `INSUFFICIENT` | No hay información confiable suficiente para auditar. |
 
-Un perfil público de LinkedIn suele mostrar solo un fragmento a visitantes no autenticados. **Si no ve Titular, Acerca de y Experiencia, no debería atribuirse una auditoría completa.** Puede entregar un diagnóstico parcial, pero va a separar lo que realmente vio de lo que falta.
-
-Para exportar: LinkedIn en escritorio → tu perfil → **Más / Recursos → Guardar en PDF** (si la opción está disponible). También podés pegar el texto de las secciones. Tapá datos sensibles antes de compartirlo.
-
-No usamos scraping con credenciales, cookies de sesión ni mecanismos para saltar restricciones de LinkedIn.
-
-## 📁 Estructura del repositorio
+## 📁 Estructura
 
 ```text
 careerkit/
-├── .claude-plugin/marketplace.json     # Marketplace de Claude
-├── plugins/careerkit/                  # Plugin instalable desde Claude
+├── .claude-plugin/marketplace.json
+├── plugins/careerkit/                   # Plugin marketplace de Claude
 │   ├── .claude-plugin/plugin.json
-│   └── skills/careerkit/              # Skill empaquetado
-├── skills/careerkit/                  # Skill canónico para Codex
+│   └── skills/careerkit/               # Copia sincronizada del skill
+├── skills/careerkit/                   # Fuente canónica para Codex
 │   ├── SKILL.md
 │   ├── workflows/
 │   ├── references/
-│   └── templates/
-├── examples/
+│   ├── templates/
+│   └── examples/
 ├── tests/
-└── README.md
+├── README.md
+├── CHANGELOG.md
+├── CONTRIBUTING.md
+└── LICENSE
 ```
 
-## 🛠️ Desarrollo y validación
+## 🛡️ Transparencia y privacidad
 
-Editar primero `skills/careerkit/` y ejecutar `python3 tests/validate.py --sync` para reflejar cambios en el plugin de Claude. Luego `python3 tests/validate.py` para validar ambos árboles.
+- Nunca inventamos experiencia, métricas, certificaciones o resultados.
+- No pedimos credenciales ni utilizamos scraping agresivo o evasión de bloqueos.
+- El navegador autenticado es **opcional y solo lectura**, con consentimiento.
+- Las fuentes externas no sustituyen el contenido real de LinkedIn.
+- Nunca publicamos ni modificamos perfiles sin permiso expreso.
+- Los prompts de fotografías no garantizan conservar una identidad perfecta; revisá el resultado antes de publicarlo.
 
-Si tenés Claude Code instalado, verificá adicionalmente con `claude plugin validate .` y `claude plugin validate plugins/careerkit`; estas pruebas no se ejecutan en este paquete.
+## 🤝 Sumate
 
-## 💜 Créditos y uso responsable
+Si te sirve, compartilo. Si ves un error, abrí un issue o mandá un PR. Este proyecto es un recurso para la comunidad y no depende del repositorio externo que usamos como referencia conceptual.
 
-El proyecto `linkedin-profile-optimizer` compartido como referencia sirvió **solo para observar patrones arquitectónicos generales** (workflows y plantillas). CareerKit no copia su código, documentación extensa, base de conocimiento ni reglas de algoritmo. No hagas pasar estimaciones de distribución del feed de LinkedIn por hechos oficiales.
+**No estás empezando de cero. Estás empezando con experiencia.** 💜
 
-**CareerKit es un recurso comunitario, no un producto oficial de LinkedIn, Anthropic u OpenAI.**
-
-No estás empezando de cero. Estás empezando con experiencia. 💜
-
-**Build with Fire. Deploy with Power. — Roxs**
-
-
-## 🧯 Si LinkedIn responde `Failed to fetch`
-
-Esto no significa que CareerKit se instaló mal. LinkedIn puede impedir la lectura automática o el agente puede no contar con acceso web compatible. En ese caso, CareerKit debe **detener los intentos y pedir el contenido faltante**, no inventar la auditoría.
-
-**Opción A:** desde tu propio LinkedIn, descargá el perfil en PDF si aparece la opción en escritorio; adjuntalo al chat.
-
-**Opción B:** pegá el titular, Acerca de y tus experiencias recientes, o compartí capturas. Nunca envíes contraseñas, cookies ni información confidencial.
-
-**Opción C:** usá sitios públicos oficiales para corroborar premios o charlas, sabiendo que **no reemplazan** el contenido actual del perfil de LinkedIn.
-
-Ejemplo de pedido:
-
-```text
-Usá CareerKit para auditar mi LinkedIn.
-Si no podés abrir la URL, no inventes el perfil.
-Adjunto mi perfil exportado en PDF. Mi objetivo es Platform Engineering Lead.
-Indicá qué secciones están cubiertas y cuáles faltan.
-```
-
-CareerKit no evita barreras de LinkedIn ni accede a tu cuenta automáticamente.
+— **Roxs** 🔥

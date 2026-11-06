@@ -1,13 +1,12 @@
-## 1.1.1 — Resilient LinkedIn retrieval
-- Explicit failed-fetch fallback and user-supplied profile intake.
-- Correctly distinguish URL access failure from an incomplete LinkedIn profile.
-- Optional corroboration from authoritative public sources; no bypass or unauthorized scraping.
-
 # Changelog
 
-## 1.1.0 — 2026-11-06
-- Marketplace instalable para Claude Code.
-- Skill canónico compatible con Codex.
-- Protocolo source-first y evaluación de cobertura para URLs de LinkedIn.
-- Ejemplos de auditoría parcial y completa.
-- Pruebas de integridad y sincronización.
+## [1.2.0] - 2026-11-06
+- Browser-assisted import opt-in using available host tools; no bundled browser.
+- Capability diagnosis `careerkit check`.
+- Source labels and separate `PUBLIC_PRESENCE_REPORT` output.
+- Clear LinkedIn fetch fallback, permission, privacy and evidence rules.
+- Marketplace and Codex copy synchronization tests.
+- Photo and career-transition workflows, guides and templates from 1.1.1 now live in `skills/careerkit/`.
+
+## [1.1.1]
+- Added fallback instructions for inaccessible LinkedIn URLs.

@@ -1,38 +1,22 @@
-# LinkedIn — source-based audit
+# LinkedIn evidence workflow
 
-Follow the source-first protocol in `../SKILL.md` and the decision matrix in `../references/source-policy.md`.
+## Stage 1 — Gather
+- Read user supplied data if present; never demand a PDF when a valid pasted About/experience is already available.
+- Follow `browser-import.md` for opt-in access to own authenticated session when tooling supports it.
+- Try exact public URL once using available web tools, not curl loops or spoofed headers. Tool output `Failed to fetch` is **not** evidence the profile contains no information.
+- If blocked, use search tools if available. Query exact profile URL / name + verifiable associated organization. Prefer official speaker, employer, certifications and personal site. Resolve same-name ambiguity before attributing.
+- Do not infer current headline/experience from snippets or external bio. These are evidence only for `PUBLIC_PRESENCE_REPORT`.
 
-## Intake
-Record target role, country, language, experience, source files/URL. Do NOT delay an audit asking for role goals when evidence is already enough: state assumptions and proceed.
+## Stage 2 — Coverage and evidence ledger
+Create a compact matrix for Headline, About, Experience, Skills, Featured, Education, Languages. Each row: `observed via LinkedIn` / `user-provided` / `external only` / `unavailable`, date/source, and uncertainty.
 
-## Retrieval failure — mandatory graceful fallback
-If opening the supplied URL returns **Failed to fetch**, 403, 429, a login gate, a CAPTCHA, or an empty page:
-1. Report exactly that the URL could not be retrieved. **Do not retry indefinitely**, bypass restrictions, ask for cookies, or silently switch to an unrelated profile.
-2. If available and permitted, try **one** ordinary public web search with the exact profile URL or person's name to locate an official portfolio or other authoritative public pages. Record those as **external corroboration only**, never as proof of what LinkedIn displays. If search tools are unavailable, skip this step.
-3. Look for profile material the user already attached or pasted (PDF, screenshot, résumé, LinkedIn headline/About/Experience). If found, use it, labeling it **user-provided**.
-4. If headline, About and experience are still missing, set readiness to **INSUFFICIENT**. Do not run a fake complete audit, make up scores, or reconstruct the LinkedIn profile from search snippets.
-5. Return a short and actionable handoff, in the user's language, with the intake block below. Do not claim LinkedIn itself is broken; the current agent's retrieval failed.
+## Stage 3 — Decide output
+- `FULL_AUDIT`: headline + About + substantive experience from profile or user export. Audit, three headlines, About rewrite, job bullets grounded in facts, prioritized skills, featured/photo guidance, outreach, 7-day plan.
+- `PARTIAL_AUDIT`: audit observed portions, rewrites ONLY for sections supported; highlight absent sections.
+- `PUBLIC_PRESENCE_REPORT`: offer useful external professional positioning report, with verified strengths and keyword hypotheses. State clearly that it is NOT an audit of LinkedIn fields. Ask for profile text/PDF to finish.
+- `INSUFFICIENT`: explain missing access/tools and ask for minimal input; can still give actionable checklist.
 
-**Fallback answer template (Spanish):**
-> No pude abrir tu LinkedIn desde este agente (`Failed to fetch`). El skill está cargado, pero no tengo suficiente contenido del perfil para auditarlo correctamente. Podés adjuntar el PDF que descargues de tu propio LinkedIn, pegar el texto o enviar capturas. No necesito tu contraseña ni tus cookies. Si querés empezar por lo esencial, compartí:
->
-> - Titular actual:
-> - Acerca de / About:
-> - Experiencia reciente (cargo, empresa, período y logros):
-> - Rol al que apuntás (opcional):
->
-> Con eso puedo hacer la auditoría; identificaré las secciones que sigan sin estar disponibles.
+Do not create precise subjective scores or fabricated metrics. If citing sources, cite actual URLs or provided file references in host's format.
 
-## Evidence checks
-- If URL available and web access possible, attempt actual retrieval; record visible sections, not snippets alone.
-- With PDF, extract text, inspect document pages if text is incomplete, and note sections absent from the export.
-- With user-supplied content, mark `user-provided`; it is sufficient for rewriting the text even if unverified externally.
-- Check each notable factual assertion against provided text/source.
-
-## Tiers
-**FULL:** Headline + About + relevant experience visible. Deliver scoped full review and three headline variations, About, experience, prioritized skills if provided or suggestions clearly labeled, featured, recruiter inbound/outbound, 7-day plan.
-**PARTIAL:** Only review observed parts; include coverage table. Draft only grounded content; ask for missing core sections once. Do not assign numerical SEO/recruiter scores.
-**INSUFFICIENT:** Stop at useful triage. Explain retrieval limitations and exactly how to supply missing information. Provide a short copy-paste intake template; no fabricated complete About.
-
-## Evidence-based writing
-Use action → scope → outcome. No fake metrics. Avoid claims about opaque LinkedIn algorithm, exact keyword ranking, or predicted recruiting conversions. Label suggestions as proposed.
+## Stage 4 — Deliver
+Follow `templates/audit.md`. Do not make up any access capability or claim successful reading of pages not read.

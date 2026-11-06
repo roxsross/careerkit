@@ -1,3 +1,16 @@
-# Professional photo prompts
+# Workflow: professional portrait prompts
 
-Choose a style matching profession, channel and personality; no need to stereotype industries. Ask for/identify reference image only when needed. Offer six distinct styles: classic studio, modern office, minimal solid color, urban tech, premium B&W editorial, warm library. Keep subject visually recognizable: same facial structure, skin tone, distinctive traits, realistic texture. Avoid claims of perfect fidelity; offer a negative instruction to prevent face changes, excessive smoothing, text/watermarks. Deliver a detailed prompt and a short version. If image-generation tool is available and requested, use it with the reference. Never generate identity details from text alone.
+## Decision
+- **Prompt only:** Generate prompts; do not claim an image was produced.
+- **Image edit:** Use an image-editing tool if available and authorized, based on a supplied or authorized reference image. Without a reference, do not promise faithful identity preservation.
+
+## Process
+1. Clarify intended use only if essential: LinkedIn avatar, CV, speaker bio, website; otherwise default LinkedIn avatar.
+2. Choose a fitting style from `references/photo-styles.md` based on role, tone and personal preference (not stereotypes).
+3. Produce a concrete visual prompt with setting, clothing, light, lens/angle, crop, background and negative constraints.
+4. Instruct preservation of recognizable facial structure, skin tone, age cues and natural features; no unwanted beautification, skin lightening, body changes or identity replacement.
+5. Frame for small circular avatars; eyes sharp, good contrast, natural skin texture; avoid text overlays.
+6. Note image tools may vary in fidelity; inspect the output before publishing. Respect consent for other people's images.
+
+## Output
+Provide one recommended prompt, up to two alternatives if requested, plus a short authenticity checklist. See `templates/photo-output.md`.

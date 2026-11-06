@@ -1,4 +1,6 @@
-# Browser-assisted import (opt-in)
+# Browser-assisted import (optional, opt-in)
+
+The recommended route is the profile PDF (`pdf-import.md`). Offer the browser only as an alternative when the user prefers it and a connected browser tool actually exists.
 
 For a user's **own profile**, offer a session-aware browser route when available. This is a strategy using host capabilities, **not** an embedded browser or a LinkedIn API.
 

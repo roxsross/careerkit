@@ -1,0 +1,6 @@
+# Datos personales de perfiles: nunca commitear
+*.pdf
+inbox/
+Basic_LinkedInDataExport*/
+Complete_LinkedInDataExport*/
+.DS_Store

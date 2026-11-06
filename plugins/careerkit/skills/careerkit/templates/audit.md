@@ -12,7 +12,7 @@
 | Acerca de | ... | ... | ... |
 | Experiencia | ... | ... | ... |
 | Skills | ... | ... | ... |
-| Destacados | ... | ... | ... |
+| Destacados | ... | ... | (no incluido en el PDF de LinkedIn) |
 | Educación / idiomas | ... | ... | ... |
 
 ## Lectura en 10 segundos (solo si hay contenido real)

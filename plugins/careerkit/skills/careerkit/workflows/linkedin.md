@@ -2,8 +2,9 @@
 
 ## Stage 1 — Gather
 - Read user supplied data if present; never demand a PDF when a valid pasted About/experience is already available.
-- Follow `browser-import.md` for opt-in access to own authenticated session when tooling supports it.
-- Try exact public URL once using available web tools, not curl loops or spoofed headers. Tool output `Failed to fetch` is **not** evidence the profile contains no information.
+- If no profile content was supplied, follow `pdf-import.md`: include the PDF export steps in your **first** reply.
+- `browser-import.md` is an optional alternative, only if the user prefers it and the tooling is really connected.
+- Try exact public URL at most once per conversation using available web tools, not curl loops or spoofed headers. Never retry after a failure. Tool output `Failed to fetch` is **not** evidence the profile contains no information.
 - If blocked, use search tools if available. Query exact profile URL / name + verifiable associated organization. Prefer official speaker, employer, certifications and personal site. Resolve same-name ambiguity before attributing.
 - Do not infer current headline/experience from snippets or external bio. These are evidence only for `PUBLIC_PRESENCE_REPORT`.
 

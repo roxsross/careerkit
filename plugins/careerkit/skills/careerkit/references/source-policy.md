@@ -1,6 +1,6 @@
 # Source and privacy policy
 
-Evidence grades: `A` actual user-authorized LinkedIn field; `B` user-supplied profile export, screenshot or copy; `C` official external page or linked portfolio; `D` search snippet / unverifiable third-party claim; `X` inaccessible.
+Evidence grades: `A` actual user-authorized LinkedIn field; `B` user-supplied profile PDF export (recommended default), screenshot or copy; `C` official external page or linked portfolio; `D` search snippet / unverifiable third-party claim; `X` inaccessible.
 
 - Grade C can corroborate career accomplishments but **cannot** verify how current LinkedIn sections read.
 - D is only a lead to investigate; never base substantive audit claims solely on it.

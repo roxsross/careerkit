@@ -37,7 +37,20 @@ Podés invocarlo así:
 /careerkit:careerkit Auditá mi perfil de LinkedIn: https://www.linkedin.com/in/usuario/
 ```
 
-### ¿Querés leer tu perfil con tu propia sesión de Chrome?
+### 📄 Ruta recomendada: el PDF de tu perfil
+
+LinkedIn bloquea la lectura automática de perfiles, así que la forma más segura y confiable es que **vos** exportes tu perfil:
+
+1. Entrá a tu perfil desde la **computadora** (no desde la app).
+2. Tocá **Más** (o **Recursos**) debajo de tu nombre → **Guardar en PDF**.
+3. Abrí el PDF y, si querés, tapá el bloque de **Contacto** (mail, teléfono). No hace falta para la auditoría.
+4. Subilo al chat (claude.ai) o pasá la ruta en Claude Code: `/careerkit:careerkit auditá ~/Downloads/Profile.pdf`
+
+Vos controlás qué compartís, no se usa tu sesión ni contraseña y funciona igual en claude.ai, Claude Code y Codex. El PDF no incluye **Destacado**, foto ni banner: si querés que se revisen, sumá una captura.
+
+> No subas el PDF a este repo. El `.gitignore` ya excluye `*.pdf`.
+
+### Alternativa opcional: leer tu perfil con tu propia sesión de Chrome
 
 Claude Code puede conectarse con **Claude in Chrome** bajo ciertos requisitos. No viene incluido en CareerKit y requiere instalación, conexión y permisos por separado. Consultá la [documentación de Claude in Chrome](https://code.claude.com/docs/en/chrome).
 
@@ -70,7 +83,7 @@ careerkit auditá mi perfil https://www.linkedin.com/in/usuario/ y no confundas 
 ```
 
 ```text
-careerkit usá el PDF de mi perfil. Prepará tres headlines y un About natural sin inventar métricas.
+careerkit usá el PDF de mi perfil (~/Downloads/Profile.pdf). Prepará tres headlines y un About natural sin inventar métricas.
 ```
 
 ```text
@@ -81,7 +94,7 @@ Más ejemplos en [examples/requests.md](skills/careerkit/examples/requests.md) y
 
 ## 🔎 ¿Por qué a veces falla LinkedIn?
 
-Un `Failed to fetch` significa que **esa herramienta** no logró leer la URL, no que la persona no tenga experiencia. CareerKit prioriza un navegador autorizado cuando esté conectado, luego lectura pública, fuentes profesionales verificables y documentos que compartas.
+Un `Failed to fetch` significa que **esa herramienta** no logró leer la URL, no que la persona no tenga experiencia. Por eso CareerKit pide el **PDF de tu perfil desde la primera respuesta**, intenta la URL pública como máximo una vez (sin reintentos) y, mientras tanto, te adelanta lo que encuentre en fuentes públicas verificables.
 
 **No puede asegurar acceso a LinkedIn** ni evita controles de acceso. Una fuente externa puede respaldar tu trayectoria, pero no demuestra el texto real de tu About o tus skills actuales.
 

@@ -110,3 +110,25 @@ El proyecto `linkedin-profile-optimizer` compartido como referencia sirvió **so
 No estás empezando de cero. Estás empezando con experiencia. 💜
 
 **Build with Fire. Deploy with Power. — Roxs**
+
+
+## 🧯 Si LinkedIn responde `Failed to fetch`
+
+Esto no significa que CareerKit se instaló mal. LinkedIn puede impedir la lectura automática o el agente puede no contar con acceso web compatible. En ese caso, CareerKit debe **detener los intentos y pedir el contenido faltante**, no inventar la auditoría.
+
+**Opción A:** desde tu propio LinkedIn, descargá el perfil en PDF si aparece la opción en escritorio; adjuntalo al chat.
+
+**Opción B:** pegá el titular, Acerca de y tus experiencias recientes, o compartí capturas. Nunca envíes contraseñas, cookies ni información confidencial.
+
+**Opción C:** usá sitios públicos oficiales para corroborar premios o charlas, sabiendo que **no reemplazan** el contenido actual del perfil de LinkedIn.
+
+Ejemplo de pedido:
+
+```text
+Usá CareerKit para auditar mi LinkedIn.
+Si no podés abrir la URL, no inventes el perfil.
+Adjunto mi perfil exportado en PDF. Mi objetivo es Platform Engineering Lead.
+Indicá qué secciones están cubiertas y cuáles faltan.
+```
+
+CareerKit no evita barreras de LinkedIn ni accede a tu cuenta automáticamente.

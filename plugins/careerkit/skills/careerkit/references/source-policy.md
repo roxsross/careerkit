@@ -14,3 +14,6 @@ Suggested user prompt if insufficient:
 "Pude ver [fields], pero no [fields]. Para una auditoría completa, compartime el PDF de tu perfil desde LinkedIn en escritorio (Más/Recursos → Guardar en PDF, si aparece) o pegá Titular, Acerca de y Experiencia. Podés ocultar datos privados. Mientras tanto puedo revisar solo lo que sí veo." 
 
 Never request secrets, cookies, headless-login scripts, browser session exports, or unauthorized profile scraping. Prefer user-controlled exports and explicit consent.
+
+## Failed-to-fetch behavior
+A failed URL request proves only that the agent could not retrieve it during this attempt. It does not mean the LinkedIn profile is deleted, private, incomplete, or invalid. Do not scrape via third-party mirrors or unauthorized APIs. Ordinary search results may be used to corroborate a public credential, but must never be passed off as live LinkedIn fields. Use user-supplied PDF or pasted sections for the substantive profile audit.

@@ -1,8 +1,8 @@
 # Changelog
 
-## [1.0.0] — 2026-11-06
-
-- Lanzamiento de CareerKit como skill de código abierto.
-- Workflows para LinkedIn, fotografía profesional y transiciones laborales.
-- README en voz Roxs, ejemplos listos para copiar y walkthrough ficticio.
-- Políticas de veracidad, privacidad, consentimiento y validación estructural.
+## 1.1.0 — 2026-11-06
+- Marketplace instalable para Claude Code.
+- Skill canónico compatible con Codex.
+- Protocolo source-first y evaluación de cobertura para URLs de LinkedIn.
+- Ejemplos de auditoría parcial y completa.
+- Pruebas de integridad y sincronización.

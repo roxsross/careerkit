@@ -1,0 +1,9 @@
+{
+  "name": "careerkit",
+  "version": "1.1.0",
+  "description": "Evidence-based LinkedIn audits, professional photo prompts, and job-transition support",
+  "author": {
+    "name": "Roxs · 295DevOps"
+  },
+  "license": "MIT"
+}

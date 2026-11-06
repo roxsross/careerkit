@@ -1,0 +1,14 @@
+{
+  "name": "careerkit-marketplace",
+  "description": "CareerKit by Roxs / 295DevOps",
+  "owner": {
+    "name": "Roxs · 295DevOps"
+  },
+  "plugins": [
+    {
+      "name": "careerkit",
+      "source": "./plugins/careerkit",
+      "description": "Source-based LinkedIn audits, professional photo prompts, and career transition help"
+    }
+  ]
+}

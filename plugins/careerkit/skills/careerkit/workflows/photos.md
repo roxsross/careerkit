@@ -1,0 +1,3 @@
+# Professional photo prompts
+
+Choose a style matching profession, channel and personality; no need to stereotype industries. Ask for/identify reference image only when needed. Offer six distinct styles: classic studio, modern office, minimal solid color, urban tech, premium B&W editorial, warm library. Keep subject visually recognizable: same facial structure, skin tone, distinctive traits, realistic texture. Avoid claims of perfect fidelity; offer a negative instruction to prevent face changes, excessive smoothing, text/watermarks. Deliver a detailed prompt and a short version. If image-generation tool is available and requested, use it with the reference. Never generate identity details from text alone.

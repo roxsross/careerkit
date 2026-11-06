@@ -1,137 +1,112 @@
 # CareerKit 🔥
 
-**Your Career. Your Next Move.**
+**Your Career. Your Next Move.** · By **Roxs | 295DevOps**
 
-> Tu experiencia ya existe. CareerKit te ayuda a contarla mejor, sin inventar nada.
+En tecnología optimizamos pipelines, recursos, infraestructura y código... pero ¿cuándo nos sentamos a revisar cómo contamos lo que sabemos hacer?
 
-**By Roxs · [295DevOps](https://blog.295devops.com) · [roxs.dev](https://roxs.dev)**  
-*Build with Fire. Deploy with Power.*
+Soy Roxs y armé **CareerKit** para que más colegas puedan mostrar su experiencia sin inventarse una carrera. Si estás buscando tu primera oportunidad, cambiando de rol o atravesando una transición laboral, este recurso es para vos. 💜
 
----
+No hay fórmulas mágicas para conseguir trabajo ni un "SEO 100x" garantizado. Hay buenas preguntas, evidencia real y pasos concretos.
 
-## 👋 ¡Hola, comunidad!
+## Qué hace
 
-Soy Roxs. En tecnología pasamos horas optimizando pipelines, infraestructura, automatizaciones y código. Pero ¿cuándo fue la última vez que optimizamos la forma en que contamos **lo que sabemos hacer**?
+- 🔍 **LinkedIn:** intenta leer el perfil público, identifica cuánto pudo ver y **no inventa secciones ocultas**. Si necesita el PDF o el texto, te dice exactamente qué falta.
+- 📸 **Fotografía:** prepara prompts para retratos profesionales preservando tu identidad (no genera imágenes por sí solo).
+- 🚀 **Transición laboral:** te ayuda a ordenar experiencia, oportunidades, mensajes y próximos pasos sin presionarte.
 
-CareerKit nació pensando en colegas que están buscando su primer trabajo, cambiando de rol o atravesando una situación laboral difícil. Una herramienta no resuelve una transición por arte de magia, pero sí puede ayudarte a ordenar tus ideas, reconocer tus logros y dar un próximo paso concreto.
+## ⚡ Instalación recomendada: Claude Code Marketplace
 
-**Esto no es un generador de experiencia ficticia.** Acá no se inventan métricas, cargos ni historias para quedar bien. Si falta información, el agente te lo dice.
-
-Es un **Agent Skill open source** para **Claude Code** y **OpenAI Codex**, con workflows reutilizables, recursos y ejemplos. No necesita API keys propias, MCP ni servicios pagos adicionales para funcionar como instrucciones (la plataforma que uses puede tener sus propios requisitos).
-
-## ✨ ¿Qué podés hacer?
-
-| Modo | Para qué sirve | Resultado |
-| --- | --- | --- |
-| 🔎 LinkedIn Audit | Ver tu perfil con mirada de recruiter | Diagnóstico, headline, About, skills, experiencia y plan de mejora |
-| 📸 Professional Photo | Preparar un retrato profesional con IA | Seis estilos y prompts que respetan tus rasgos |
-| 🧭 Career Transition | Organizar una búsqueda sin abrumarte | Prioridades, networking, preparación y pasos realistas |
-
-Pensado para personas de tecnología, pero adaptable a cualquier profesión. Responde en español o inglés.
-
-## ⚡ Instalación (copiá y pegá)
-
-Cloná este repositorio:
-
-```bash
-git clone https://github.com/roxsross/careerkit.git
-cd careerkit
-```
-
-> La URL funcionará después de publicar el repo con ese nombre. También podés descargar el ZIP y descomprimirlo.
-
-**Claude Code — instalación en tu proyecto** (desde la raíz de tu proyecto, indicando la ruta al repo descargado):
-
-```bash
-mkdir -p .claude/skills/careerkit
-cp -R /RUTA/AL/careerkit/{SKILL.md,workflows,references,templates,examples} .claude/skills/careerkit/
-```
-
-**OpenAI Codex — instalación en tu proyecto:**
-
-```bash
-mkdir -p .agents/skills/careerkit
-cp -R /RUTA/AL/careerkit/{SKILL.md,workflows,references,templates,examples} .agents/skills/careerkit/
-```
-
-**Instalación personal**: copiá esa misma carpeta a `~/.claude/skills/careerkit/` para Claude Code o `~/.agents/skills/careerkit/` para Codex. Reiniciá o recargá la sesión si tu agente no detecta el skill inmediatamente.
-
-> En ambos casos el archivo debe quedar en `<directorio-de-skills>/careerkit/SKILL.md`. La carga exacta puede variar según la versión del agente.
-
-## 🧪 Probalo en 30 segundos
-
-En tu agente, pedí una tarea concreta:
+Una vez publicado este repositorio como **`roxsross/careerkit`**, abrí una sesión de **Claude Code** y ejecutá estos comandos, uno por vez:
 
 ```text
-Usá el skill careerkit para auditar mi perfil de LinkedIn.
-No inventes métricas. Busco oportunidades como DevOps Engineer.
-Te comparto mi About y mi experiencia a continuación: ...
+/plugin marketplace add roxsross/careerkit
+/plugin install careerkit@careerkit-marketplace
+```
+
+Luego probá:
+
+```text
+/careerkit:careerkit Auditá mi LinkedIn: https://www.linkedin.com/in/tu-usuario/
+```
+
+En el terminal también podés usar `claude plugin marketplace add roxsross/careerkit` y `claude plugin install careerkit@careerkit-marketplace`.
+
+> Esto instala un marketplace **comunitario**, no implica publicación en el catálogo oficial de Anthropic. Si tu Claude Code usa otra interfaz, buscá `Plugin > Marketplaces` y añadí el repositorio.
+
+## 🤖 Instalación en OpenAI Codex
+
+Desde Codex, pedile al instalador de skills:
+
+```text
+$skill-installer install https://github.com/roxsross/careerkit/tree/main/skills/careerkit
+```
+
+O agregá la carpeta `skills/careerkit` a `~/.agents/skills/careerkit` para uso personal, o `.agents/skills/careerkit` en el repositorio donde trabajes. Reiniciá Codex si no lo descubre.
+
+## 🧪 Ejemplos de uso que podés copiar
+
+```text
+/careerkit:careerkit Revisá mi LinkedIn https://www.linkedin.com/in/mi-perfil/. Primero comprobá qué secciones podés leer. Si solo ves una parte, no hagas una auditoría completa.
 ```
 
 ```text
-Usá careerkit para armar 3 prompts de foto profesional estilo Tech Leader.
-Voy a aportar una foto mía; conservá mis rasgos reales.
+/careerkit:careerkit Te adjunto mi LinkedIn en PDF. Quiero tres titulares, un About natural y mejoras concretas en mis experiencias. No inventes métricas.
 ```
 
 ```text
-Usá careerkit para preparar un plan de búsqueda laboral de 5 días.
-Soy QA con 4 años de experiencia. Necesito priorizar acciones concretas.
+/careerkit:careerkit Quiero una foto de LinkedIn con estilo Tech Leader. Tengo una selfie; conservá mi cara y proponé dos prompts, uno editorial y uno minimalista.
 ```
 
-🔎 **Más ejemplos listos para copiar:** [examples/requests.md](examples/requests.md)  
-📋 **Ejemplo completo de entrada y salida:** [examples/walkthrough-linkedin.md](examples/walkthrough-linkedin.md)
+```text
+/careerkit:careerkit Me desvincularon hace poco. Necesito un plan realista de cinco días para buscar trabajo en DevOps y un mensaje para mi comunidad.
+```
 
-## 🧱 Qué incluye el repo
+En Codex podés invocar `$careerkit` con el mismo texto o describir la tarea en lenguaje natural.
+
+> **Importante:** CareerKit no da acceso especial a LinkedIn. La lectura de URLs depende de las herramientas disponibles en el agente. Si no puede acceder a tu perfil completo, puede trabajar con una exportación PDF o con el texto que compartas.
+
+### Instalación manual (alternativa)
+
+Si preferís evitar el marketplace de Claude, copiá el directorio `skills/careerkit/` completo a `.claude/skills/careerkit/` (Claude Code) o `.agents/skills/careerkit/` (Codex). Para usarlo en cualquier proyecto, colocá la carpeta bajo `~/.claude/skills/` o `~/.agents/skills/` respectivamente. No copies un `SKILL.md` aislado: los workflows y referencias también importan.
+
+## 🔎 ¿Por qué a veces te pide el PDF?
+
+Un perfil público de LinkedIn suele mostrar solo un fragmento a visitantes no autenticados. **Si no ve Titular, Acerca de y Experiencia, no debería atribuirse una auditoría completa.** Puede entregar un diagnóstico parcial, pero va a separar lo que realmente vio de lo que falta.
+
+Para exportar: LinkedIn en escritorio → tu perfil → **Más / Recursos → Guardar en PDF** (si la opción está disponible). También podés pegar el texto de las secciones. Tapá datos sensibles antes de compartirlo.
+
+No usamos scraping con credenciales, cookies de sesión ni mecanismos para saltar restricciones de LinkedIn.
+
+## 📁 Estructura del repositorio
 
 ```text
 careerkit/
-├── SKILL.md                 # Instrucciones del agente
-├── README.md                # Este documento
-├── LICENSE
-├── CONTRIBUTING.md
-├── CHANGELOG.md
-├── workflows/               # Rutas por necesidad
-│   ├── linkedin-audit.md
-│   ├── photo-prompts.md
-│   └── career-transition.md
-├── references/              # Criterios y estilos
-├── templates/               # Formatos de salida
-├── examples/                # Pedidos reales y walkthrough
-└── tests/                   # Comprobación estructural
+├── .claude-plugin/marketplace.json     # Marketplace de Claude
+├── plugins/careerkit/                  # Plugin instalable desde Claude
+│   ├── .claude-plugin/plugin.json
+│   └── skills/careerkit/              # Skill empaquetado
+├── skills/careerkit/                  # Skill canónico para Codex
+│   ├── SKILL.md
+│   ├── workflows/
+│   ├── references/
+│   └── templates/
+├── examples/
+├── tests/
+└── README.md
 ```
 
-## 🔐 El criterio antes que el hype
+## 🛠️ Desarrollo y validación
 
-- **Nunca** inventar logros, métricas, títulos o empleos.
-- La URL de LinkedIn **no garantiza acceso** al perfil. Pegá el texto o un PDF cuando corresponda.
-- Una IA puede orientar la búsqueda, **no garantizar entrevistas ni trabajo**.
-- No pegues información privada de empresas, clientes o personas.
-- Los prompts de foto **no son fotos generadas**: requerís una herramienta de imagen compatible y, si usás una referencia, consentimiento.
-- Para decisiones legales o financieras complejas, buscá asesoramiento especializado.
+Editar primero `skills/careerkit/` y ejecutar `python3 tests/validate.py --sync` para reflejar cambios en el plugin de Claude. Luego `python3 tests/validate.py` para validar ambos árboles.
 
-## ✅ Validación y contribuciones
+Si tenés Claude Code instalado, verificá adicionalmente con `claude plugin validate .` y `claude plugin validate plugins/careerkit`; estas pruebas no se ejecutan en este paquete.
 
-```bash
-python3 tests/validate_skill.py
-```
+## 💜 Créditos y uso responsable
 
-La validación revisa la estructura y referencias; **no reemplaza las pruebas de comportamiento** dentro de Claude Code y Codex. Mirá [CONTRIBUTING.md](CONTRIBUTING.md) si querés aportar ejemplos, traducciones o mejoras.
+El proyecto `linkedin-profile-optimizer` compartido como referencia sirvió **solo para observar patrones arquitectónicos generales** (workflows y plantillas). CareerKit no copia su código, documentación extensa, base de conocimiento ni reglas de algoritmo. No hagas pasar estimaciones de distribución del feed de LinkedIn por hechos oficiales.
 
-## 🫶 ¿Por qué comparto esto?
+**CareerKit es un recurso comunitario, no un producto oficial de LinkedIn, Anthropic u OpenAI.**
 
-Porque la comunidad no se construye solo cuando hay un evento o un anuncio. También cuando un colega necesita una mano para contar su historia, conseguir visibilidad o preparar su próxima oportunidad.
+No estás empezando de cero. Estás empezando con experiencia. 💜
 
-Si CareerKit te sirve, compartilo. Si ves algo mejorable, abrí un issue o mandá un PR. Y si alguien está buscando trabajo, ayudalo a conectar con oportunidades reales.
-
-**No estás empezando de cero. Estás empezando con experiencia.** 💜
-
-— **Roxs** 🔥  
-[Blog](https://blog.295devops.com) · [GitHub](https://github.com/roxsross) · [Web](https://roxs.dev)
-
----
-
-<details><summary>🇺🇸 English quick start</summary>
-
-CareerKit is a free, open-source Agent Skill for LinkedIn audits, identity-preserving professional photo prompts, and realistic career transition support. Designed by Roxs / 295DevOps. Install the complete folder under `.claude/skills/careerkit/` (Claude Code) or `.agents/skills/careerkit/` (Codex), then ask: `Use careerkit to audit my LinkedIn About without inventing achievements.` It is not a recruiting service and does not guarantee employment.
-
-</details>
+**Build with Fire. Deploy with Power. — Roxs**
